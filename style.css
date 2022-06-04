@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, #c29811, #2c7744);
+    color: rgb(236, 236, 195);
+    font-family: "Gentium Plus";
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: antiquewhite;
+    color: #0a4e1f;
+    font-family: "Gentium Plus";
+}
+
+form button{
+    color: #c29811;
+    background: antiquewhite;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: #c29811;
+    color: antiquewhite;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: antiquewhite;
+    color: #044719;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.trash-btn, .complete-btn{
+    background: #2c7744;
+    color: antiquewhite;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background: #c29811;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #044719;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+    background: antiquewhite;
+    font-family: "Gentium Plus" ;
+    font-size: large;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background:#c29811;
+    top: 0;
+    right: 0;
+    padding: 0.9rem;
+    pointer-events: none;
+    color: antiquewhite;
+}
+
+.select:hover::after {
+    background: antiquewhite;
+    color: #c29811;
+}
